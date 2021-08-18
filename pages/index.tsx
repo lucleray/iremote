@@ -5,11 +5,12 @@ import firebase from '../firebase/clientApp';
 require("firebase/firestore");
 
 export const getStaticProps = async () => {
-  const response = await firebase.firestore().collection('votes').get();
-  const votes = response.docs.map((doc, index) => {
-    return doc.data();
-  });
-  console.log(votes);
+  // const response = await firebase.firestore().collection('votes').get();
+  // const votes = response.docs.map((doc, index) => {
+  //   return doc.data();
+  // });
+
+  const votes = [{ vote: 'true' }]
   
   return {
     props: {
